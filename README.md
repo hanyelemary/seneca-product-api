@@ -27,5 +27,4 @@ Now, open up the browser (or postman) and go to the following url:
 
 ```
 http://localhost:3000/products/123
-
 ```
