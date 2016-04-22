@@ -15,10 +15,10 @@ var productService = function() {
 	}];
 
 	this.add('role: products, cmd: getProductById', (args, callback) => {
-		var productId = args.req$.params.id,
-			product = productList.find(prod => {
-				return prod.id == productId;
-			});		
+		var productId = args.req$.params.id;
+		var product = productList.find(prod => {
+			return prod.id == productId;
+		});
 
 		callback(null, product);
 	});
