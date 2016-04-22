@@ -23,12 +23,22 @@ var productService = function() {
 		callback(null, product);
 	});
 
+	this.add('role: products, cmd: search', (args, callback) => {
+		var pattern = new RegExp(args.query);
+		var results = productList.filter(prod => {
+			return (pattern.test(prod.name) || pattern.test(prod.description));
+		});
+
+		callback(null, results);
+	});
+
 	this.act('role: web', {
 		use: {
-			prefix: '/products',
+			prefix: '',
 			pin: 	'role: products, cmd: *',
 			map: {
-				getProductById: { alias: '/:id' }
+				getProductById: { alias: '/products/:id' },
+				search: { POST: true, alias: '/products' }
 			}
 		}
 	});
