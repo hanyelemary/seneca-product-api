@@ -1,0 +1,29 @@
+{
+  "name": "seneca-product-api",
+  "version": "1.0.0",
+  "description": "Sample code for a RESTful API that deals with product information",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app/server.js",
+    "integration-test": "./node_modules/jasmine-node/bin/jasmine-node --matchall app/*-tests.js --captureExceptions --forceexit"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "request": "^2.72.0"
+  },
+  "dependencies": {
+    "seneca": "^2.0.1",
+    "express": "^4.13.4",
+    "body-parser": "^1.15.0"
+  },
+  "keywords": [
+    "Seneca",
+    "NodeJS",
+    "JavaScript",
+    "Microservice",
+    "REST",
+    "API"
+  ],
+  "author": "Hany Elemary",
+  "license": "MIT"
+}
