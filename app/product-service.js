@@ -31,7 +31,7 @@ var productService = function() {
 				getProductById: { alias: '/:id' }
 			}
 		}
-	})
+	});
 };
 
 module.exports = productService;
